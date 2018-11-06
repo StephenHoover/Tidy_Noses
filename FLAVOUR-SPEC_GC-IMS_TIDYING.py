@@ -8,6 +8,8 @@ def _HelperFunction_csv():
     except ModuleNotFoundError:
         return('''The modules "glob, os, & shutil" need to be installed to run this program.''')
     
+    # ------------------------------------------------------------------------------------------------
+    
     def _createFolder(directory):
         try:
             if not os.path.exists(directory):
@@ -19,17 +21,17 @@ def _HelperFunction_csv():
     _createFolder('./TIDY_NumPy_files/')
     _createFolder('./TIDY_csv_files/')
     
-    #--------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------
     
     TIDY_csvfiles = glob.glob('TIDY*.csv')    
     [shutil.move(j, './TIDY_csv_files/') for j in TIDY_csvfiles]
 
-    #--------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------
 
     TIDY_NumPy_files = glob.glob('TIDY*.npy')
     [shutil.move(p, './TIDY_NumPy_files/') for p in TIDY_NumPy_files]
     
-    #--------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------
 
     originalcsv = glob.glob('*.csv')
     [shutil.move(q, './original_csv_files/') for q in originalcsv]
