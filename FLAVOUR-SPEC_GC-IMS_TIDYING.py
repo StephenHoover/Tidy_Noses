@@ -64,5 +64,3 @@ def TidyFlavourSpec_GC_IMS(folder):
             np.savetxt('TIDY_'+ x, d, delimiter=",") # save as a csv ('"outfile_name.csv", dataframe, delimiter)
 
     _HelperFunction_csv()
-            
-
