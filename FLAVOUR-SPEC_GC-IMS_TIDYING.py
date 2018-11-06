@@ -41,6 +41,7 @@ def TidyFlavourSpec_GC_IMS(folder):
     '''Tidy csv files from the FlavourSpec Gas Chromatograph Ion Mobility Spectrometer (GC-IMS)'''
     
     # ------------------------------------------------------------------------------------------------
+    
     try:
         import numpy as np, pandas as pd, glob, os
         os.chdir(folder)
