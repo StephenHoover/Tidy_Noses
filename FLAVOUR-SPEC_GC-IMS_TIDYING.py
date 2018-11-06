@@ -44,7 +44,7 @@ def TidyFlavourSpec_GC_IMS(folder):
         os.chdir(folder)
 
     except ModuleNotFoundError:
-        return('''The modules "numpy, pandas, tempfile, glob, & os" need to be installed to run this
+        return('''The modules "numpy, pandas, glob, & os" need to be installed to run this
         program.''')
     
     except NameError:
@@ -61,7 +61,7 @@ def TidyFlavourSpec_GC_IMS(folder):
             d = np.array(d)        # convert from pandas dataframe to a numpy array
             d = d[:,2:]            # this removes columns 0 and 1
             np.save('TIDY_'+ x, d) # save the file as a numpy array ("outfile_name.npy", dataframe)
-            np.savetxt('TIDY_'+ x, d, delimiter=",") # save as a csv ('"outfile_name.npy", dataframe, delimiter)
+            np.savetxt('TIDY_'+ x, d, delimiter=",") # save as a csv ('"outfile_name.csv", dataframe, delimiter)
 
     _HelperFunction_csv()
             
